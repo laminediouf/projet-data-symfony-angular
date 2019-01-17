@@ -1,0 +1,10 @@
+.list_image{
+    position: relative;
+    overflow: scroll;
+    width: 90%;
+    height: 580px;
+}
+ul{
+    list-style: none;
+    text-decoration: none;
+}
