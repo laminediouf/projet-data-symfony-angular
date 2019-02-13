@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <h2 style="text-align: center;"> Toutes les écoles françaises dans le monde.</h2>
+        <h2 style="text-align: center;"> Toutes les écoles de L'AEFE dans le monde.</h2>
        <!-- <p>
             L’Agence pour l’enseignement français à l’étranger est un établissement public français chargé du suivi et de l’animation du réseau des établissements d’enseignement français à l’étranger.
         </p> -->
@@ -26,7 +26,9 @@
             <div class="list-type1">
               <ul>
 
-                  <li (click)="onSelect(data)" *ngFor = "let data of httpdata"><a>{{ data.entstructurenomcourant }}  / {{ data.ville }} /{{ data.libellePays }}</a></li>
+                  <li *ngFor = "let data of httpdata">
+                    <a (click)="onSelect(data.id,data.latitude,data.longitude)">{{ data.entstructurenomcourant }}  / {{ data.ville }} /{{ data.libellePays }}</a>
+                  </li>
 
               </ul>
             </div>

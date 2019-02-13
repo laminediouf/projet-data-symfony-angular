@@ -10,7 +10,7 @@ import { DetailEcoleComponent } from './detail-ecole/detail-ecole.component';
 
  const appRoutes: Routes = [
      { path: 'accueil', component: AccueilComponent},
-     { path: 'accueil/:id', component: DetailEcoleComponent},
+     { path: 'accueil/:id/:longitude/:latitude', component: DetailEcoleComponent},
      { path: '', component: AccueilComponent}
  ];
 @NgModule({

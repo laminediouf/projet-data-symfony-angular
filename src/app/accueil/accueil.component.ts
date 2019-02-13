@@ -10,6 +10,8 @@ declare let L;
 })
 export class AccueilComponent implements OnInit {
   public selectedId;
+ /* public selectedLatitude;
+  public selectedLongitude;*/
   constructor(private http: HttpClient,private router: Router, private route: ActivatedRoute) { }
     httpdata;
     name;
@@ -20,8 +22,8 @@ export class AccueilComponent implements OnInit {
 
 
             // Leaflet
-       const map = L.map('map').setView([14.672672, -17.437414], 8);
-      const marker1 = new L.Marker(new L.LatLng(14.672672, -17.437414));
+       const map = L.map('map').setView([13.0738883,48.0309477], 4);
+     /* const marker1 = new L.Marker(new L.LatLng(14.672672, -17.437414));
       const marker2 = new L.Marker(new L.LatLng(14.75, -17.437414));
       const marker3 = new L.Marker(new L.LatLng(16.033311, -16.503021));
       const marker4 = new L.Marker(new L.LatLng(12.57994, -16.283951));
@@ -41,17 +43,16 @@ export class AccueilComponent implements OnInit {
       marker7.addTo(map).bindPopup('Ecole Franco-Sénégalaise Dial Diop<br>').openPopup();
       marker8.addTo(map).bindPopup('Ecole Française Jacques Praevert<br>').openPopup();
       marker9.addTo(map).bindPopup('Ecole chez Bouba<br>').openPopup();
-      marker10.addTo(map).bindPopup('Ecole maternelle des Almadies<br>').openPopup();
+      marker10.addTo(map).bindPopup('Ecole maternelle des Almadies<br>').openPopup();*/
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: ' <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
     }
     displaydata(data){this.httpdata = data;
+    console.log(data);}
 
-        console.log(data);}
-    onSelect(data){
-        this.router.navigate(['/accueil',data.id])
-
+    onSelect(id,latitude,longitude){
+        this.router.navigate(['/accueil',id,latitude,longitude])
     }
 }

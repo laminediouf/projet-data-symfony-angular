@@ -1,7 +1,7 @@
 <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <h2 style="text-align: center;"> Toutes les écoles françaises dans le monde.</h2>
+          <h2 style="text-align: center;"> Toutes les écoles de L'AEFE dans le monde.</h2>
        <!--   <p>
             L’Agence pour l’enseignement français à l’étranger est un établissement public français chargé du suivi et de l’animation du réseau des établissements d’enseignement français à l’étranger.
           </p> -->
@@ -12,7 +12,7 @@
       </div>
 
   <div class="row">
-    <div class="col-md-4 chat">
+    <div class="col-md-6 chat">
       <div class="card mb-sm-3 mb-md-0 contacts_card">
         <div class="card-body contacts_body">
 
@@ -34,21 +34,25 @@
             <li><a >Nom de l'établissement : {{data.entstructurenomcourant}}</a></li>
             <li><a >Adresse : {{data.adresse}}</a></li>
             <li><a >E-mail : {{data.entstructureemail}}</a></li>
-            <li><a target="_blank" href="{{data.entstructuresiteweb}}">Site web : {{data.entstructuresiteweb}}</a> </li>
+            <li class="lienn"><a target="_blank" href="{{data.entstructuresiteweb}}">Site web : {{data.entstructuresiteweb}}</a> </li>
             <li><a >latitude : {{data.latitude}}</a></li>
             <li><a >longitude : {{data.longitude}}</a></li>
           </ul>
           </div>
 
          <div>
-          <button (click)="gotoEntreprise()" type="button" class="btn btn-info">retour</button>
+
+             <div class="map__list col-md-3 text-center">
+                 <button (click)="gotoEntreprise()" type="button" class="btn btn-info">Retour</button>
+             </div>
+
          </div>
         </div>
       </div>
     </div>
 
 
-    <div class="col-md-8 chat">
+    <div class="col-md-6 chat">
       <div class="card" id="map">
         <div class="card-header msg_head">
           <div class="d-flex bd-highlight">
